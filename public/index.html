@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Client</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <form id="apiForm">
+        <input type="text" id="baseUrl" placeholder="Base URL (e.g., http://localhost:8080)" value="http://localhost:8080" required>
+        <input type="text" id="getAll" placeholder="Endpoint de obtener todos" value="/api/v1/products" required>
+        <input type="text" id="insert" placeholder="Endpoint de insertar" value="/api/v1/products/insert" required>
+        <input type="text" id="edit" placeholder="Endpoint de editar (/{id})" value="/api/v1/products/edit/{id}" required>
+        <input type="text" id="delete" placeholder="Endpoint de eliminar (/{id})" value="/api/v1/products/delete/{id}" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="content"></div>
+
+    <h3>Insertar Producto</h3>
+    <form id="insertForm">
+        <input type="text" name="name" placeholder="Nombre del producto" required>
+        <input type="text" name="description" placeholder="Descripción del producto" required>
+        <input type="number" step="0.01" name="price" placeholder="Precio del producto" required>
+        <button type="submit">Insertar Producto</button>
+    </form>
+</body>
+</html>
